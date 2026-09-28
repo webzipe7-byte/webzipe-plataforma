@@ -1,0 +1,22 @@
+# Configuración para la CLI de Supabase (npx supabase ...).
+# En el proyecto alojado, revisa además los ajustes del panel indicados en README.md.
+
+project_id = "webzipe-plataforma"
+
+[auth]
+# Nadie puede registrarse por su cuenta: las cuentas las crea un administrador.
+enable_signup = false
+jwt_expiry = 3600
+
+[auth.email]
+enable_signup = false
+
+# Las funciones validan la sesión internamente (auth-login e invitation son públicas a propósito).
+[functions.auth-login]
+verify_jwt = false
+
+[functions.invitation]
+verify_jwt = false
+
+[functions.admin-employees]
+verify_jwt = false

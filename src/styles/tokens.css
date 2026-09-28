@@ -1,0 +1,79 @@
+/* =====================================================================
+   Tokens de diseño — identidad WebZipe (misma paleta que la página oficial:
+   fondo casi negro, azul eléctrico, dorado, Fraunces + Inter).
+   ===================================================================== */
+:root {
+  color-scheme: dark;
+
+  /* Superficies */
+  --bg: #07080d;
+  --bg-raised: #0a0c14;
+  --panel: #0e111c;
+  --panel-2: #121626;
+  --panel-hover: #171d32;
+  --line: #242a42;
+  --line-soft: #181c2e;
+
+  /* Texto */
+  --text: #f5f3ee;
+  --text-soft: #aeb3c9;
+  --text-mute: #767c93;
+
+  /* Marca */
+  --blue: #3d5fe0;
+  --blue-bright: #7d9bff;
+  --blue-deep: #18244f;
+  --accent: #5b7cf5;
+  --gold: #c9a15c;
+  --gold-bright: #eecf9a;
+  --gold-deep: #5d4420;
+  --gold-line: rgba(201, 161, 92, 0.4);
+
+  /* Estados */
+  --ok: #34c77b;
+  --danger: #ee6b61;
+  --amber: #f0a63c;
+  --violet: #a78bfa;
+  --teal: #2fc3c7;
+  --wa: #25d366;
+
+  /* Tipografía */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+
+  /* Formas */
+  --r-xs: 7px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* Sombras y movimiento */
+  --shadow-sm: 0 6px 18px -10px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 22px 44px -20px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 44px 90px -30px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 18px 40px -16px rgba(201, 161, 92, 0.35);
+  --shadow-blue: 0 16px 36px -16px rgba(61, 95, 224, 0.55);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --focus: 0 0 0 3px rgba(125, 155, 255, 0.45);
+
+  /* Medidas del layout */
+  --sidebar-w: 256px;
+  --topbar-h: 64px;
+  --bottom-nav-h: 64px;
+  --content-max: 1280px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Colores de cada "tono" (badges, estados, bordes de tarjetas). */
+.tone-neutral, .badge-neutral { --tone: #c3c8dc; --tone-bg: rgba(195, 200, 220, 0.1); }
+.tone-muted, .badge-muted { --tone: var(--text-mute); --tone-bg: rgba(118, 124, 147, 0.12); }
+.tone-blue, .badge-blue { --tone: var(--blue-bright); --tone-bg: rgba(91, 124, 245, 0.16); }
+.tone-gold, .badge-gold { --tone: var(--gold-bright); --tone-bg: rgba(201, 161, 92, 0.16); }
+.tone-green, .badge-green { --tone: #5fdc9c; --tone-bg: rgba(52, 199, 123, 0.14); }
+.tone-red, .badge-red { --tone: #ff8a80; --tone-bg: rgba(238, 107, 97, 0.15); }
+.tone-amber, .badge-amber { --tone: #ffc26b; --tone-bg: rgba(240, 166, 60, 0.15); }
+.tone-violet, .badge-violet { --tone: #c4b2ff; --tone-bg: rgba(167, 139, 250, 0.15); }
+.tone-teal, .badge-teal { --tone: #6fe3e6; --tone-bg: rgba(47, 195, 199, 0.14); }
