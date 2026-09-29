@@ -48,8 +48,9 @@ export async function sendMessage(input: {
       p_title: input.title,
       p_body: input.body,
       p_audience: input.audience,
-      p_group_id: input.groupId ?? null,
-      p_employee_id: input.employeeId ?? null,
+      // Solo se envía el id que corresponde a la audiencia; '' no es un uuid válido.
+      p_group_id: input.audience === 'group' ? input.groupId || null : null,
+      p_employee_id: input.audience === 'employee' ? input.employeeId || null : null,
     }),
   ) as { message_id: string; recipients: number };
 }
